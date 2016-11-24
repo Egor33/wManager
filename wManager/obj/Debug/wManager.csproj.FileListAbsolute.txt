@@ -14,3 +14,6 @@ D:\ISPU\Курсач\wManager\wManager\obj\Debug\wManager.exe
 D:\ISPU\Курсач\wManager\wManager\obj\Debug\wManager.pdb
 D:\ISPU\Курсач\wManager\wManager\obj\Debug\Notice.g.cs
 D:\ISPU\Курсач\wManager\wManager\obj\Debug\Notice.baml
+D:\wManager\wManager\bin\Debug\wManager.exe.config
+D:\wManager\wManager\obj\Debug\wManager.exe
+D:\wManager\wManager\obj\Debug\wManager.pdb

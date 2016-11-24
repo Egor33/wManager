@@ -29,6 +29,6 @@
             <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="button_Click"/>
 
         </Grid>
-        <TextBox x:Name="procTB" Grid.Column="1" HorizontalAlignment="Left" Height="258" Margin="68,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Background="{x:Null}" BorderThickness="2,1,1,1" IsEnabled="False" FontFamily="Microsoft NeoGothic" FontWeight="Bold" IsReadOnlyCaretVisible="True"/>
+        <TextBox x:Name="procTB" Grid.Column="1" HorizontalAlignment="Left" Height="300" Margin="302,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Background="{x:Null}" BorderThickness="2,1,1,1" IsEnabled="False" FontFamily="Microsoft NeoGothic" FontWeight="Bold" IsReadOnlyCaretVisible="True"/>
     </Grid>
 </Window>

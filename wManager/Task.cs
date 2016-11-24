@@ -8,6 +8,10 @@ namespace wManager
 {
     class Task
     {
-        string name, description;
+        private Task(string name1)
+        {
+            string name, description;
+            DateTime deadline = new DateTime();
+        }
     }
 }
