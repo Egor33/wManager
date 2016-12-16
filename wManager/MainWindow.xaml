@@ -5,30 +5,115 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wManager"
         mc:Ignorable="d"
-        Title="wManager" Height="350" Width="525">
-    <Window.Background>
-        <LinearGradientBrush EndPoint="1.2,1" MappingMode="RelativeToBoundingBox" StartPoint="0,1">
-            <GradientStop Color="#FF37CB1F" Offset="1"/>
-            <GradientStop Color="#FFEDF70C"/>
-        </LinearGradientBrush>
-    </Window.Background>
-    <Grid Margin="1" Width="800" Height="500">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="12*"/>
-            <ColumnDefinition Width="35*"/>
-        </Grid.ColumnDefinitions>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="44*"/>
-                <RowDefinition Height="40*"/>
-                <RowDefinition Height="34*"/>
-                <RowDefinition Height="47*"/>
-                <RowDefinition Height="154*"/>
-            </Grid.RowDefinitions>
-            <Button x:Name="getP" Content="Get Processes" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="98" Background="{x:Null}" Click="getP_Click" FontFamily="Microsoft NeoGothic" FontWeight="Bold"/>
-            <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-
-        </Grid>
-        <TextBox x:Name="procTB" Grid.Column="1" HorizontalAlignment="Left" Height="300" Margin="302,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Background="{x:Null}" BorderThickness="2,1,1,1" IsEnabled="False" FontFamily="Microsoft NeoGothic" FontWeight="Bold" IsReadOnlyCaretVisible="True"/>
-    </Grid>
+        Title="wManager" Height="372" Width="653.833" Background="#FFE1F700">
+    <DockPanel>
+        <TabControl x:Name="tabControl" TabStripPlacement="Left" RenderTransformOrigin="0.5,0.5" Foreground="Black" BorderThickness="0" ClipToBounds="True" IsSynchronizedWithCurrentItem="False" Margin="0" Padding="0" SelectedIndex="0" Cursor="Arrow" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" Panel.ZIndex="1" Background="#FFF3FF00">
+            <TabControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TabControl.RenderTransform>
+            <TabItem Header="Процессы" Margin="-2,-4,9,-23" Padding="20,20,20,0" ClipToBounds="True" FontWeight="Bold" FontSize="18.667" FontFamily="Candara" TextOptions.TextHintingMode="Animated" RenderTransformOrigin="0.395,1.096">
+                <Grid Margin="-15,0,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="247*"/>
+                        <RowDefinition Height="73*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,0" StartPoint="1,0">
+                            <GradientStop Color="#FFE8FF00" Offset="1"/>
+                            <GradientStop Color="#FF74FF00"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <TextBox x:Name="procTB" Margin="10" TextWrapping="Wrap" AllowDrop="False" ClipToBounds="True" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="&#xD;&#xA;Журнал" Margin="-2,23,8,-43" AllowDrop="False" FontWeight="Bold" FontSize="18.667" FontFamily="Candara" Padding="25,2,20,2">
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,0" StartPoint="1,0">
+                            <GradientStop Color="#FFE8FF00" Offset="1"/>
+                            <GradientStop Color="#FF74FF00"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Grid HorizontalAlignment="Left" Height="330" Margin="10,10,0,0" VerticalAlignment="Top" Width="441"/>
+                    <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="249" Margin="19,17,0,0" VerticalAlignment="Top" Width="277"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="324,32,0,0" VerticalAlignment="Top" Height="30" Width="125" FontSize="14"/>
+                    <Button x:Name="button" Content="Очистить журнал" HorizontalAlignment="Left" Margin="324,77,0,0" VerticalAlignment="Top" Width="125" Height="42" FontSize="14"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="&#xD;&#xA; Мои цели" Margin="-2,43,8,-67" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" FontSize="18.667" FontFamily="Candara" Padding="20,0,15,0">
+                <TabItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.659"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.489"/>
+                    </TransformGroup>
+                </TabItem.RenderTransform>
+                <Grid Margin="0,0,-1,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="54*"/>
+                        <RowDefinition Height="240*"/>
+                        <RowDefinition Height="47*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="18*"/>
+                        <ColumnDefinition Width="149*"/>
+                        <ColumnDefinition Width="109*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="223" VerticalAlignment="Top" Width="279" Grid.Column="1" Grid.Row="1"/>
+                    <Button x:Name="button1" Content="Добавить цель" HorizontalAlignment="Left" Margin="22,0,0,0" VerticalAlignment="Top" Width="147" Height="60" Grid.Column="2" Grid.Row="1" Click="button1_Click"/>
+                    <Button x:Name="button2" Content="Изменить цель" HorizontalAlignment="Left" Margin="22,83,0,0" VerticalAlignment="Top" Width="147" Height="60" Grid.Column="2" Grid.Row="1"/>
+                    <Button x:Name="button3" Content="Удалить цель" HorizontalAlignment="Left" Margin="22,162,0,0" VerticalAlignment="Top" Width="147" Height="61" Grid.Column="2" Grid.Row="1"/>
+                    <Label x:Name="label" Content="Текущие цели" HorizontalAlignment="Left" Margin="61,10,0,0" VerticalAlignment="Top" Width="160" Height="40" FontFamily="Candara" FontSize="24" FontWeight="Bold" Grid.Column="1"/>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,0" StartPoint="1,0">
+                            <GradientStop Color="#FFE8FF00" Offset="1"/>
+                            <GradientStop Color="#FF74FF00"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Настройки" HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="122" Margin="-2,135,-3,-135" FontFamily="Candara" FontSize="18.667" FontWeight="Bold" Padding="15,18,15,0">
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,0" StartPoint="1,0">
+                            <GradientStop Color="#FFE8FF00" Offset="1"/>
+                            <GradientStop Color="#FF74FF00"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Grid HorizontalAlignment="Left" Height="330" Margin="10,10,0,0" VerticalAlignment="Top" Width="441"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Программы&#xD;&#xA;" Height="70" VerticalAlignment="Top" Margin="-2,-1,8,0" FontSize="18.667" FontFamily="Candara" FontWeight="Bold" Padding="10,18,20,1" Grid.IsSharedSizeScope="True">
+                <Grid RenderTransformOrigin="0.584,0.506">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="325*"/>
+                        <ColumnDefinition Width="192*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,0" StartPoint="1,0">
+                            <GradientStop Color="#FFE8FF00" Offset="1"/>
+                            <GradientStop Color="#FF74FF00"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <ListBox x:Name="listBox2" HorizontalAlignment="Left" Height="321" Margin="10,10,0,0" VerticalAlignment="Top" Width="292"/>
+                    <Button x:Name="button4" Content="Добавить" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="159" Height="80"/>
+                    <Button x:Name="button4_Copy" Content="Изменить" Grid.Column="1" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="159" Height="80"/>
+                    <Button x:Name="button4_Copy1" Content="Удалить" Grid.Column="1" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="159" Height="80"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\ISPU\Курсач\wManager\wManager\obj\Debug\
+E:\wManager\wManager\obj\Debug\
 wManager
 none
 false
 DEBUG;TRACE
-D:\ISPU\Курсач\wManager\wManager\App.xaml
-2-1687227107
+E:\wManager\wManager\App.xaml
+41547561050
 
-11497193154
+14113824437
 13738642453
-MainWindow.xaml;Notice.xaml;
+AddTask.xaml;MainWindow.xaml;Notice.xaml;Page1.xaml;
 
 False
 

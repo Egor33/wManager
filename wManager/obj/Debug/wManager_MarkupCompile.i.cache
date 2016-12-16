@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\wManager\wManager\obj\Debug\
+E:\wManager\wManager\obj\Debug\
 wManager
 none
 false
 DEBUG;TRACE
-D:\wManager\wManager\App.xaml
-3-846000503
+E:\wManager\wManager\App.xaml
+41547561050
 
-161553432046
+181808389665
 13738642453
-MainWindow.xaml;Notice.xaml;TaskManager.xaml;
+AddTask.xaml;MainWindow.xaml;Notice.xaml;Page1.xaml;
 
-False
+True
 

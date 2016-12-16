@@ -41,6 +41,8 @@ namespace wManager
             
             notice.Show();
 
+           
+
 
 
         }
@@ -75,6 +77,12 @@ namespace wManager
             
             notice.show();
             
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            AddTask task1 = new AddTask();
+            task1.Show();
         }
     }
 }

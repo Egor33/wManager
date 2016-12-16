@@ -19,7 +19,7 @@ namespace wManager
         public Process[]  getProccesses(){
 
             Process[] processes = Process.GetProcesses();
-            processes[1]
+            //processes[1];
             return processes;
             }
 
